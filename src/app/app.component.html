@@ -1,0 +1,13 @@
+<button (click)=test()> Get cat </button>
+<!-- <form action=""><input type="text"></form> -->
+<div *ngIf="cats.length">
+    <div *ngFor="let cat of cats" class="card">
+        <div class="container">
+            <img [src]='cat.photoUrl' alt="cat" style="width:100%">
+            <h4>{{cat.name}}</h4>
+            <h5>{{cat.weight}}kg</h5>
+            <p>{{cat.description}}</p>
+            <a [href]='cat.wikiUrl'>See more on wiki</a>
+        </div>
+    </div>
+</div>
